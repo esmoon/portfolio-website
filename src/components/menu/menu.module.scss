@@ -1,0 +1,108 @@
+.wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  top: 50px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.8s;
+}
+
+.wrapperActive {
+  opacity: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  transform: translateX(0);
+  background-color: black;
+  transition: all 0.8s;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.closeBtn {
+  cursor: pointer;
+  margin-bottom: 160px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  li {
+    margin-bottom: 32px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionTitle {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 95px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.mailContact {
+  cursor: pointer;
+  margin-top: 160px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 43px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .closeBtn svg {
+    width: 25px;
+  }
+
+  .sectionTitle {
+    font-size: 45px;
+  }
+
+  .mailContact {
+    font-size: 25px;
+  }
+
+  .sections {
+    li {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .sectionTitle {
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,57 @@
+.wrapper {
+  padding-top: 48px;
+  background: black;
+  position: sticky;
+  top: 0;
+  height: 100px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content {
+}
+
+.logo {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}
+
+.burgerMenu {
+  position: relative;
+  width: 45px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burgerMenu::before {
+  content: '';
+  position: absolute;
+  width: 45px;
+  background-color: white;
+  height: 2px;
+  top: 0;
+}
+
+.burgerMenu span {
+  content: '';
+  position: absolute;
+  top: 9px;
+  width: 45px;
+  height: 2px;
+  background-color: white;
+}
+
+.burgerMenu::after {
+  content: '';
+  position: absolute;
+  width: 45px;
+  background-color: white;
+  height: 2px;
+  bottom: 0;
+}
