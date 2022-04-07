@@ -5,7 +5,7 @@ import github from 'assets/img/github.svg';
 import mail from 'assets/img/mail.svg';
 const Contacts = () => {
   return (
-    <div className={s.wrapper}>
+    <div id='contacts' className={s.wrapper}>
       <div className='container'>
         <div className={s.inner}>
           <a
@@ -26,7 +26,7 @@ const Contacts = () => {
           </a>
           <a
             className={s.mail}
-            href='mailto:es-moon@mail.ru?subject=Вопрос по работе'
+            href='mailto:es-moon@mail.ru?subject=Предложение по работе'
             target='_blank'
             rel='noreferrer'
           >

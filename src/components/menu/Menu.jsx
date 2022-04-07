@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-scroll';
 import s from './menu.module.scss';
-
 const Menu = ({ isActive, setActive }) => {
   useEffect(() => {
     const scroll = () => {
@@ -17,7 +17,17 @@ const Menu = ({ isActive, setActive }) => {
       <div className={s.inner}>
         <div className='container'>
           <div className={s.content}>
-            <p className={s.logo}>ESM</p>
+            <Link
+              onClick={() => setActive(false)}
+              to='home'
+              className={s.logo}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+            >
+              ESM
+            </Link>
             <div className={s.rightSide}>
               <div className={s.closeBtn} onClick={() => setActive(false)}>
                 <svg
@@ -34,11 +44,48 @@ const Menu = ({ isActive, setActive }) => {
                 </svg>
               </div>
               <ul className={s.menu}>
-                <li className={s.sectionTitle}>Projects</li>
-                <li className={s.sectionTitle}>Contacts</li>
-                <li className={s.sectionTitle}>About me</li>
+                <Link
+                  className={s.sectionTitle}
+                  to='projects'
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                  onClick={() => setActive(false)}
+                >
+                  Projects
+                </Link>
+                <Link
+                  className={s.sectionTitle}
+                  to='contacts'
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                  onClick={() => setActive(false)}
+                >
+                  Contacts
+                </Link>
+                <Link
+                  className={s.sectionTitle}
+                  to='about'
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={1000}
+                  onClick={() => setActive(false)}
+                >
+                  About me
+                </Link>
               </ul>
-              <p className={s.mailContact}>es-moon@mail.ru</p>
+              <a
+                href='mailto:es-moon@mail.ru?subject=Предложение по работе'
+                target='_blank'
+                rel='noreferrer'
+                className={s.mailContact}
+              >
+                es-moon@mail.ru
+              </a>
             </div>
           </div>
         </div>

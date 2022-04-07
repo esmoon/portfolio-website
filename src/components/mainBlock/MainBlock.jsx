@@ -8,7 +8,7 @@ const MainBlock = () => {
   return (
     <>
       <NavBar active={menuActive} setActive={setMenuActive} />
-      <div className={s.wrapper}>
+      <div id='home' className={s.wrapper}>
         <div className={s.inner}>
           <div className='container'>
             <div className={menuActive ? s.contentDisable : s.content}>
