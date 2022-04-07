@@ -1,0 +1,72 @@
+.wrapper {
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  // position: relative;
+}
+
+.inner {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// telegram
+.telegram {
+  cursor: pointer;
+}
+
+.telegram img {
+  transition: transform 0.5s ease;
+}
+
+.telegram:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+// github
+
+.github {
+  cursor: pointer;
+}
+
+.github img {
+  transition: transform 0.5s ease;
+}
+
+.github:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+// MAIL
+
+.mail {
+  cursor: pointer;
+}
+
+.mail img {
+  transition: transform 0.5s ease;
+}
+
+.mail:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 790px) {
+  .inner {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .telegram,
+  .github {
+    padding-bottom: 80px;
+  }
+}

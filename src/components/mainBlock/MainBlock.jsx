@@ -12,7 +12,7 @@ const MainBlock = () => {
         <div className={s.inner}>
           <div className='container'>
             <div className={menuActive ? s.contentDisable : s.content}>
-              <p className={s.mainTitle}>Someting about me</p>
+              <p className={s.mainTitle}>Something about me</p>
               <p className={s.mainText}>HELLO!</p>
               <div className={s.arrow}></div>
             </div>
