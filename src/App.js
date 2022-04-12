@@ -3,6 +3,7 @@ import AboutPage from 'pages/aboutPage/AboutPage';
 import ContactsPage from 'pages/contacts/ContactsPage';
 import MainPage from 'pages/mainPage/MainPage';
 import ProjectsPage from 'pages/projectsPage/ProjectsPage';
+import ReactVisibilitySensor from 'react-visibility-sensor';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <NameSection props={'About me'} />
       <AboutPage />
       <NameSection props={'Contacts'} />
-      <ContactsPage />
+      <ReactVisibilitySensor>
+        <ContactsPage />
+      </ReactVisibilitySensor>
     </>
   );
 }

@@ -3,7 +3,9 @@ import s from './contacts.module.scss';
 import telegram from 'assets/img/telegram.svg';
 import github from 'assets/img/github.svg';
 import mail from 'assets/img/mail.svg';
+import useAnalyticsEventTracker from 'hooks/useAnalyticsEventTracker';
 const Contacts = () => {
+  const gaEventTracker = useAnalyticsEventTracker('test');
   return (
     <div id='contacts' className={s.wrapper}>
       <div className='container'>
@@ -13,6 +15,7 @@ const Contacts = () => {
             href='https://tttttt.me/es_moon'
             target='_blank'
             rel='noreferrer'
+            onClick={() => gaEventTracker('click telegram', 'telegram')}
           >
             <img src={telegram} alt='telegram' />
           </a>

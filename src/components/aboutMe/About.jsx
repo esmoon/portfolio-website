@@ -6,7 +6,7 @@ const About = () => {
     {
       id: '1',
       side: 'left',
-      text: 'Меня зовут Артем, мне 18 лет и я Frontend Developer имеющий 1 год опыта коммерческой разработки.',
+      text: 'Меня зовут Артем, мне 18 лет и я Frontend Developer',
     },
     {
       id: '2',
