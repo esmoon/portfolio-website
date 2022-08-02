@@ -5,7 +5,7 @@ import github from 'assets/img/github.svg';
 import mail from 'assets/img/mail.svg';
 import useAnalyticsEventTracker from 'hooks/useAnalyticsEventTracker';
 const Contacts = () => {
-  const gaEventTracker = useAnalyticsEventTracker('test');
+  const gaEventTracker = useAnalyticsEventTracker('Contacts');
   return (
     <div id='contacts' className={s.wrapper}>
       <div className='container'>
@@ -21,9 +21,10 @@ const Contacts = () => {
           </a>
           <a
             className={s.github}
-            href='https://github.com/esmoon666'
+            href='https://github.com/esmoon'
             target='_blank'
             rel='noreferrer'
+            onClick={() => gaEventTracker('click github', 'GitHub')}
           >
             <img src={github} alt='github' />
           </a>
@@ -32,6 +33,7 @@ const Contacts = () => {
             href='mailto:es-moon@mail.ru?subject=Предложение по работе'
             target='_blank'
             rel='noreferrer'
+            onClick={() => gaEventTracker('click mail', 'Mail')}
           >
             <img src={mail} alt='mail' />
           </a>
